@@ -7,10 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    # Change this from the specific URL to allow your frontend domain
-    origins '*'  # For development. In production, specify your frontend URL
-    resource '*', 
-      headers: :any, 
-      methods: [:get, :post, :put, :patch, :delete, :options, :head]
+    origins 'https://regal-shortbread-1bcb3f.netlify.app/'
+    resource '*', headers: :any, methods: [:get, :post, :put, :patch, :delete, :options, :head]
   end
 end
